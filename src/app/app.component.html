@@ -11,9 +11,11 @@
 
 <!-- Toolbar -->
 <span>{{title | uppercase}}</span>
+<br><br>
+<!-- html only using json pipe and apiData, negative: bypasses component for manipulation -->
+{{ apiData | json }}
 <br>
-<!-- {{ apiData | json }} -->
-<br>
+<!-- data sourced directly from component -->
 <ul>
   <li *ngFor="let item of apiData$ | async">{{ item.street }} </li>
 </ul>
